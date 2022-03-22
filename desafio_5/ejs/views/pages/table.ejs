@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+    <%- include('../partials/header'); %>
+    <div class="m-4">
+        <div class="row justify-content-center">
+            <div class="card p-2" style="width: 50rem;">
+                <h3 class="text-center m-2"><%= title %></h3>
+                <hr>
+                <% if (data.length> 0) { %>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Imagen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(let product of data) {%>
+                                <tr>
+                                    <th scope="row"><%= product.id %></th>
+                                    <td><%= product.name %></td>
+                                    <td><%= product.price %></td>
+                                    <td>
+                                        <img src=<%= product.img %> style="width: 80px;" />
+                                    </td>
+                                </tr>
+                            <%} %>
+                        </tbody>
+                    </table>
+                <% } else { %>
+                    <h4 class="text-center">No hay productos</h4>
+                <% } %>
+                <div class="d-grid gap-2 mt-2">
+                    <a class="btn btn-secondary" href="/" role="button">Agregar Producto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
