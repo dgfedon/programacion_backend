@@ -1,0 +1,35 @@
+<div class="m-4">
+    <div class="row justify-content-center">
+        <div class="card p-2" style="width: 38rem;">
+            {{#if data}}
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each data}}
+                    <tr>
+                        <th scope="row">{{this.id}}</th>
+                        <td>{{this.name}}</td>
+                        <td>{{this.price}}</td>
+                        <td>
+                            <img src={{this.img}} style="width: 80px;" />
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            {{else}}
+                    <h4 class="text-center">No hay productos</h4>
+            {{/if}}
+            {{!-- <div class="d-grid gap-2 mt-2">
+                <a class="btn btn-secondary" href="/" role="button">Agregar Producto</a>
+            </div> --}}
+        </div>
+    </div>
+</div>

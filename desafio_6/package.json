@@ -1,0 +1,21 @@
+{
+  "name": "desafio_6",
+  "version": "1.0.0",
+  "description": "proyecto iniciado clase 12",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Dariana Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "handlebars": "^4.7.7",
+    "moment": "^2.29.1",
+    "socket.io": "^4.4.1"
+  }
+}
