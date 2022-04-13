@@ -1,0 +1,24 @@
+{
+  "name": "desafio_8",
+  "version": "1.0.0",
+  "description": "Desafío 8 - Base de datos",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/knex": "^0.16.1",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.5",
+    "handlebars": "^4.7.7",
+    "knex": "^0.95.15",
+    "moment": "^2.29.2",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.4.1",
+    "sqlite3": "^5.0.2"
+  }
+}
