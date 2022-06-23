@@ -1,0 +1,186 @@
+Statistical profiling result from result1.log, (978 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    804   82.2%          C:\Windows\SYSTEM32\ntdll.dll
+    162   16.6%          C:\Program Files\nodejs\node.exe
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.2%   16.7%  LazyCompile: *resolve node:path:158:10
+      1    0.1%    8.3%  RegExp: ^(?:=)
+      1    0.1%    8.3%  RegExp: ^(?:-?[0-9]+(?:\.[0-9]+)?(?=([~}\s)])))
+      1    0.1%    8.3%  LazyCompile: *wrap E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:101:22
+      1    0.1%    8.3%  LazyCompile: *normalizeString node:path:66:25
+      1    0.1%    8.3%  LazyCompile: *SourceNode_walk E:\Code\Web Dev\backend-coderhouse\node_modules\source-map\lib\source-node.js:221:53
+      1    0.1%    8.3%  Function: ^popStack E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:960:30
+      1    0.1%    8.3%  Function: ^isRegExp E:\Code\Web Dev\backend-coderhouse\node_modules\qs\lib\utils.js:214:33
+      1    0.1%    8.3%  Function: ^getKeys node:internal/util/inspect:688:17
+      1    0.1%    8.3%  Function: ^formatWithOptionsInternal node:internal/util/inspect:2048:35
+      1    0.1%    8.3%  Function: ^<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\express-handlebars\dist\express-handlebars.js:368:47
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     12    1.2%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+      2    0.2%   16.7%  GC
+    966   98.8%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    804   82.2%  C:\Windows\SYSTEM32\ntdll.dll
+     13    1.6%    C:\Program Files\nodejs\node.exe
+      4   30.8%      C:\Program Files\nodejs\node.exe
+      1   25.0%        LazyCompile: ~next E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:478:32
+      1  100.0%          LazyCompile: ~lex E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:525:30
+      1  100.0%            LazyCompile: ~lex E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:295:25
+      1   25.0%        LazyCompile: ~match E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\router\layer.js:110:39
+      1  100.0%          Function: ^matchLayer E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\router\index.js:578:20
+      1  100.0%            Function: ^next E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\router\index.js:176:16
+      1   25.0%        Function: ^next E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:478:32
+      1  100.0%          Function: ^lex E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:525:30
+      1  100.0%            Function: ^lex E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:295:25
+      1   25.0%        Function: ^Module node:internal/modules/cjs/loader:172:16
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    7.7%      LazyCompile: ~write E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:513:15
+      1  100.0%        LazyCompile: ~command E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:247:12
+      1  100.0%          LazyCompile: ~<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:193:42
+      1  100.0%            LazyCompile: ~<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:265:23
+      1    7.7%      LazyCompile: ~isRecord E:\Code\Web Dev\backend-coderhouse\node_modules\mongodb\lib\utils.js:789:18
+      1  100.0%        LazyCompile: ~transform E:\Code\Web Dev\backend-coderhouse\node_modules\mongodb\lib\connection_string.js:457:18
+      1  100.0%          LazyCompile: ~setOption E:\Code\Web Dev\backend-coderhouse\node_modules\mongodb\lib\connection_string.js:406:19
+      1  100.0%            LazyCompile: ~parseOptions E:\Code\Web Dev\backend-coderhouse\node_modules\mongodb\lib\connection_string.js:204:22
+      1    7.7%      LazyCompile: ~Server node:_http_server:418:16
+      1  100.0%        LazyCompile: ~createServer node:http:58:22
+      1  100.0%          LazyCompile: ~main E:\Code\Web Dev\backend-coderhouse\build\index.js:20:14
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1    7.7%      LazyCompile: ~ConnectionPool E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:47:16
+      1  100.0%        LazyCompile: ~Server E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:28:16
+      1  100.0%          LazyCompile: ~createAndConnectServer E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:529:32
+      1  100.0%            LazyCompile: ~<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:190:57
+      1    7.7%      LazyCompile: ~<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\lib\utils.js:465:18
+      1  100.0%        LazyCompile: ~collectionOperationCallback E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:164:54
+      1  100.0%          LazyCompile: ~<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\utils.js:409:13
+      1  100.0%            LazyCompile: ~<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:55:47
+      1    7.7%      LazyCompile: ~<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongodb\lib\connection_string.js:1077:13
+      1  100.0%        C:\Program Files\nodejs\node.exe
+      1  100.0%          Function: ~<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongodb\lib\connection_string.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1    7.7%      LazyCompile: ~<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongodb\lib\cmap\auth\scram.js:152:83
+      1  100.0%        LazyCompile: ~onMessage E:\Code\Web Dev\backend-coderhouse\node_modules\mongodb\lib\cmap\connection.js:151:14
+      1  100.0%          LazyCompile: ~<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongodb\lib\cmap\connection.js:62:44
+      1  100.0%            Function: ^emit node:events:475:44
+      1    7.7%      Function: ^setupHelperArgs E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:1104:44
+      1  100.0%        Function: ^setupHelper E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:1020:36
+      1  100.0%          Function: ^invokeAmbiguous E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:699:44
+      1  100.0%            Function: ^compile E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      1    7.7%      Function: ^lookupProperty E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\runtime.js:118:44
+      1  100.0%        Function: ^<anonymous> :1:20
+      1  100.0%          Function: ^main E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\runtime.js:207:18
+      1  100.0%            Function: ^ret E:\Code\Web Dev\backend-coderhouse\node_modules\handlebars\dist\cjs\handlebars\runtime.js:188:15
+
+    162   16.6%  C:\Program Files\nodejs\node.exe
+    131   80.9%    C:\Program Files\nodejs\node.exe
+     28   21.4%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     28  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     28  100.0%          Function: ^Socket._writeGeneric node:net:797:42
+     28  100.0%            Function: ^Socket._write node:net:834:35
+     20   15.3%      Function: ^compileFunction node:vm:308:25
+     20  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     19   95.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+     19  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    5.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      6    4.6%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      6  100.0%        Function: ^Socket._writeGeneric node:net:797:42
+      5   83.3%          Function: ^Socket._writev node:net:829:36
+      5  100.0%            Function: ^doWrite node:internal/streams/writable:399:17
+      1   16.7%          LazyCompile: ~Socket._writev node:net:829:36
+      1  100.0%            LazyCompile: ~doWrite node:internal/streams/writable:399:17
+      6    4.6%      Function: ^stat node:internal/modules/cjs/loader:151:14
+      4   66.7%        Function: ^Module._findPath node:internal/modules/cjs/loader:495:28
+      4  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      4  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      2   33.3%        Function: ^tryFile node:internal/modules/cjs/loader:385:17
+      2  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:401:23
+      1   50.0%            Function: ^tryPackage node:internal/modules/cjs/loader:339:20
+      1   50.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:495:28
+      5    3.8%      Function: ^cpus node:os:133:14
+      5  100.0%        Function: ^<anonymous> E:\Code\Web Dev\backend-coderhouse\build\routes\index.js:28:21
+      5  100.0%          Function: ^handle E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\router\layer.js:86:49
+      5  100.0%            Function: ^next E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\router\route.js:114:16
+      5    3.8%      C:\Program Files\nodejs\node.exe
+      1   20.0%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:385:17
+      1  100.0%            Function: ^tryPackage node:internal/modules/cjs/loader:339:20
+      1   20.0%        Function: ^splitRoot node:fs:2389:33
+      1  100.0%          Function: ^realpathSync node:fs:2439:22
+      1  100.0%            Function: ^toRealPath node:internal/modules/cjs/loader:394:20
+      1   20.0%        Function: ^getOwn node:internal/bootstrap/loaders:186:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:303:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:289:15
+      1   20.0%        Function: ^FastBuffer node:internal/buffer:958:14
+      1  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%            Function: ^allocUnsafeSlow node:buffer:385:50
+      1   20.0%        Function: ^<anonymous> E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\lib\helpers\pluralize.js:86:34
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            LazyCompile: ~pluralize E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\lib\helpers\pluralize.js:82:19
+      3    2.3%      Function: ^realpathSync node:fs:2439:22
+      3  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:394:20
+      2   66.7%          Function: ^tryFile node:internal/modules/cjs/loader:385:17
+      2  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:401:23
+      1   33.3%          Function: ^Module._findPath node:internal/modules/cjs/loader:495:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      3    2.3%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      3  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1   33.3%          Function: ~<anonymous> node:tls:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1   33.3%          Function: ~<anonymous> node:http:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1   33.3%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      2    1.5%      LazyCompile: ~configSecureContext node:internal/tls/secure-context:120:29
+      2  100.0%        LazyCompile: ~createSecureContext node:_tls_common:95:29
+      2  100.0%          LazyCompile: ~connect node:_tls_wrap:1598:35
+      2  100.0%            LazyCompile: ~makeConnection E:\Code\Web Dev\backend-coderhouse\node_modules\mongoose\node_modules\mongodb\lib\cmap\connect.js:241:24
+      2    1.5%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      2  100.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1   50.0%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1   50.0%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      2    1.5%      Function: ^session E:\Code\Web Dev\backend-coderhouse\node_modules\express-session\index.js:179:26
+      2  100.0%        Function: ^handle E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\router\layer.js:86:49
+      2  100.0%          Function: ^trim_prefix E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\router\index.js:288:23
+      2  100.0%            LazyCompile: *next E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\router\index.js:176:16
+      2    1.5%      Function: ^readPackage node:internal/modules/cjs/loader:291:21
+      2  100.0%        Function: ^resolveExports node:internal/modules/cjs/loader:473:24
+      2  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:495:28
+      2  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      2    1.5%      Function: ^openSync node:fs:581:18
+      2  100.0%        Function: ^readFileSync node:fs:455:22
+      2  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      2  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      2    1.5%      Function: ^memoryUsage node:internal/process/per_thread:168:23
+      2  100.0%        Function: ^<anonymous> E:\Code\Web Dev\backend-coderhouse\build\routes\index.js:28:21
+      2  100.0%          Function: ^handle E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\router\layer.js:86:49
+      2  100.0%            Function: ^next E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\router\route.js:114:16
+      2    1.2%    Function: ^getStatsFromBinding node:internal/fs/utils:531:29
+      2  100.0%      Function: ^statSync node:fs:1551:18
+      2  100.0%        Function: ^tryStat E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\view.js:174:17
+      1   50.0%          LazyCompile: ~resolve E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\view.js:146:42
+      1  100.0%            Function: ^lookup E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\view.js:104:40
+      1   50.0%          Function: ^resolve E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\view.js:146:42
+      1  100.0%            Function: ^lookup E:\Code\Web Dev\backend-coderhouse\node_modules\express\lib\view.js:104:40
+
